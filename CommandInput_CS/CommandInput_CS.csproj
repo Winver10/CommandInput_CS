@@ -1,10 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Exe</OutputType>
+        <OutputType>Library</OutputType>
         <TargetFramework>net10.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GreneratePackgeOnBuild>
+        <PackageId>CommandInput_CS</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>SmileCai</Authors>
+        <Discription>A Console Input NuGet Package, could realize Hig Light Input. But in a silly way.</Discription>
+        <PackageTags>Console; input</PackageTags>
+
+        <PackageProjectUrl>https://github.com/Winver10/CommandInput_CS</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Winver10/CommandInput_CS.git</RopositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <LincenseExpression>Apache-2.0</LincenseExpression>
     </PropertyGroup>
 
 </Project>
