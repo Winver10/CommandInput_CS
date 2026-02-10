@@ -3,7 +3,7 @@
     <PropertyGroup>
         <OutputType>Library</OutputType>
         <TargetFramework>net10.0</TargetFramework>
-        <GeneratePackageOnBuild>true</GreneratePackgeOnBuild>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>CommandInput_CS</PackageId>
         <Version>0.0.1</Version>
         <Authors>SmileCai</Authors>
@@ -11,9 +11,9 @@
         <PackageTags>Console; input</PackageTags>
 
         <PackageProjectUrl>https://github.com/Winver10/CommandInput_CS</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/Winver10/CommandInput_CS.git</RopositoryUrl>
+        <RepositoryUrl>https://github.com/Winver10/CommandInput_CS.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <LincenseExpression>Apache-2.0</LincenseExpression>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     </PropertyGroup>
 
 </Project>
