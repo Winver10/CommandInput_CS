@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace CommandValues_CS;
+namespace CommandLine.CommandValues_CS;
 
 static public class ValueInCommandInput
 {

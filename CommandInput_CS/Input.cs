@@ -2,9 +2,10 @@
 using System;
 using System.Diagnostics;
 using System.Text;
-using CommandDisplay_CS;
+using CommandLine.CommandDisplay_CS;
+using Microsoft.VisualBasic;
 
-namespace CommandInputProcesser_CS;
+namespace CommandLine.CommandInputProcesser_CS;
 
 static public class Input
 {
@@ -15,7 +16,7 @@ static public class Input
 
         if (!string.IsNullOrEmpty(initialText))
         {
-            Display.DisplayTextWithColorString(initialText, display);
+            Display.DisplayTextWithColor(initialText, display);
             input.Append(initialText);
         }
 
@@ -37,7 +38,7 @@ static public class Input
 
             if (!char.IsControl(keyInfo.KeyChar))
             {
-                Display.DisplayTextWithColorChar(keyInfo.KeyChar, display);
+                Display.DisplayTextWithColor(keyInfo.KeyChar, display);
                 input.Append(keyInfo.KeyChar);
             }
         }while (keyInfo.Key != ConsoleKey.Enter);

@@ -1,9 +1,9 @@
+using System.Diagnostics;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
-namespace CommandDisplay_CS;
+namespace CommandLine.CommandDisplay_CS;
 
 struct StuatShoot
 {
@@ -107,7 +107,7 @@ public class DisplayProcesser
 
 static class Display
 {
-    public static void DisplayTextWithColorString(string text, DisplayProcesser displayProcesser)
+    public static void DisplayTextWithColor(string text, DisplayProcesser displayProcesser)
     {
         if (string.IsNullOrEmpty(text))
         return;
@@ -120,7 +120,7 @@ static class Display
         }
     }
 
-    public static void DisplayTextWithColorChar(char c, DisplayProcesser displayProcesser)
+    public static void DisplayTextWithColor(char c, DisplayProcesser displayProcesser)
     {
         if ((char.IsControl(c)))
             return ;

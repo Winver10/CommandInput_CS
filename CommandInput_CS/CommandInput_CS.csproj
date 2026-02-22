@@ -5,7 +5,7 @@
         <TargetFramework>net10.0</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>CommandInput_CS</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>SmileCai</Authors>
         <Discription>A Console Input NuGet Package, could realize Hig Light Input. But in a silly way.</Discription>
         <PackageTags>Console; input</PackageTags>

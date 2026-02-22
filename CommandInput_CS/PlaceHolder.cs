@@ -1,6 +1,6 @@
 using System;
 
-namespace CommandPlaceHolder_CS;
+namespace CommandLine.CommandPlaceHolder_CS;
 
 static public class PlaceHolders
 {

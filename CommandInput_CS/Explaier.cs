@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using CommandValues_CS;
-using CommandPlaceHolder_CS;
+using CommandLine.CommandValues_CS;
+using CommandLine.CommandPlaceHolder_CS;
 using System.Text;
 
-namespace CommandExplainer_CS;
+namespace CommandLine.CommandExplainer_CS;
 
-public static class Explaner
+public static class Explainer
 {
     static public List<string> ExplainCommand(string s)
     {
