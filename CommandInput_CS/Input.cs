@@ -47,6 +47,11 @@ static public class Input
         return input.ToString();
     }
 
+/// <summary>
+/// A function to get the input
+/// </summary>
+/// <param name="LastCommand">The last commad in the loop</param>
+/// <returns></returns>
     static public string GetInput(string? LastCommand)
     {
         var display = new DisplayProcesser();
