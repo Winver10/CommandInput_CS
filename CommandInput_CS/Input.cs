@@ -25,9 +25,13 @@ static public class Input
             keyInfo = Console.ReadKey(true);
 
             if (keyInfo.Key == ConsoleKey.UpArrow)
+            {
                 return CommandPlaceHolder_CS.PlaceHolders.PlaceHolderForMoreAction + "_UP";
+            }
             if (keyInfo.Key == ConsoleKey.DownArrow)
+            {
                 return CommandPlaceHolder_CS.PlaceHolders.PlaceHolderForMoreAction + "_DOWN";
+            }
 
             if (keyInfo.Key == ConsoleKey.Backspace && input.Length > 0)
             {
@@ -42,9 +46,12 @@ static public class Input
                 input.Append(keyInfo.KeyChar);
             }
         }while (keyInfo.Key != ConsoleKey.Enter);
-        
+
         Console.Write('\n');
-        return input.ToString();
+        if (input.Length != 0)
+            return input.ToString();
+        else
+            return CommandPlaceHolder_CS.PlaceHolders.PlaceHolderForSpace;
     }
 
 /// <summary>

@@ -20,63 +20,77 @@ static public class Logic
     {
         enter.preStart();
         string input = string.Empty;
-        uint index = 0, real_index = index;
+        int index = -1, real_index = index;
+        bool fromHistory = false;
 
         while(true)
         {
-            enter.loopBegin();
-            enter.writeCommandSign();
+            if (!fromHistory)
+            {
+                enter.loopBegin();
+                enter.writeCommandSign();
+            }
             input = Input.GetInput(input);
+            fromHistory = false;
 
             if (input == PlaceHolders.PlaceHolderForSpace)
             {
                 input = string.Empty;
                 enter.withoutCommand();
             }
-            else if (input == PlaceHolders.PlaceHolderForMoreAction + "UP")
+            else if (input == PlaceHolders.PlaceHolderForMoreAction + "_UP")
             {
+                fromHistory = true;
                 if (ValueInCommandInput.CommandInputHistory.Count == 0)
                 {
-                    index = 0;
+                    index = -1;
+                    input = string.Empty;
+                }
+                else if (index <= 0)
+                {
+                    index = -1;
+                    input = ValueInCommandInput.CommandInputHistory[0];
+                    Display.ClearLine(Console.WindowWidth);
+                    enter.writeCommandSign();
                 }
                 else
                 {
-                    if (index <= 1)
-                    {
-                        index = 0;
-                    }
-                    else
-                    {
-                        index--;
+                 
                         Display.ClearLine(Console.WindowWidth);
                         enter.writeCommandSign();
                         input = ValueInCommandInput.CommandInputHistory[Convert.ToInt32(index)];
-                    }
+                    index--;
+                   
                 }
             }
-            else if (input == PlaceHolders.PlaceHolderForMoreAction + "DOWN")
+            else if (input == PlaceHolders.PlaceHolderForMoreAction + "_DOWN")
             {
-                if (index + 2 >= ValueInCommandInput.CommandInputHistory.Count)
+                fromHistory = true;
+                if (index + 1 >= ValueInCommandInput.CommandInputHistory.Count - 1)
                 {
                     index = real_index;
+                    input = string.Empty;
+                    Display.ClearLine(Console.WindowWidth);
+                    enter.writeCommandSign();
                 }
                 else
                 {
                     index++;
                     Display.ClearLine(Console.WindowWidth);
                     enter.writeCommandSign();
-                    input = ValueInCommandInput.CommandInputHistory[Convert.ToInt32(index)];
+                    input = ValueInCommandInput.CommandInputHistory[Convert.ToInt32(index + 1)];
                 }
             }
             else
             {
-                if (uint.Max(index, real_index) - uint.Min(index, real_index) >= 1)
+                if (int.Max(index, real_index) - int.Min(index, real_index) != 1)
                 {
                     ValueInCommandInput.CommandInputHistory.Add(input);
-                    real_index = Convert.ToUInt32(ValueInCommandInput.CommandInputHistory.Count - 1);
+                    real_index = Convert.ToInt32(ValueInCommandInput.CommandInputHistory.Count - 1);
                 }
                 index = real_index;
                 enter.withCommand(input);
+                input = string.Empty;
             }
         }
     }

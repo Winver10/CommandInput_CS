@@ -4,7 +4,7 @@ Here is the Project CommandInput_CS
 
 ## How to use
 
-You can see the Example in Program.cs. 
+You need to create a class with interface **IEnterFunction**, then use the static function **"Logic.Run(IEnterFunction enter)"** directly. Or, you can make your own logic in the Main() function.
 
 After a few time, you can download the NuGet Package **"CommandInput_CS"**. 
 

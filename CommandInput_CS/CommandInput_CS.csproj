@@ -4,7 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>CommandInput_CS</PackageId>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <Authors>SmileCai</Authors>
     <Discription>A Console Input NuGet Package, could realize Hig Light Input. But in a silly way.</Discription>
     <PackageTags>Console; input</PackageTags>
@@ -12,5 +12,10 @@
     <RepositoryUrl>https://github.com/Winver10/CommandInput_CS.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageReadmeFile>ReadMe.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../ReadMe.md" Pack="true" PackagePath="" />
+  </ItemGroup>
 </Project>
